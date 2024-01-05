@@ -34,7 +34,7 @@
 
 .discussion-forum-content {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  // grid-template-columns: 1fr 4fr;
   grid-gap: 1.5rem;
 
   @media (max-width: 768px) {

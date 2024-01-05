@@ -23,6 +23,7 @@ export class DiscussHomeComponent implements OnInit {
 
   @ViewChild('scrollContainerHeight', { static: false }) elementView: ElementRef;
   discussionList = [];
+  discussionListBkp = [];
   routeParams: any;
   showStartDiscussionModal = false;
   // categoryId: string;
@@ -30,6 +31,7 @@ export class DiscussHomeComponent implements OnInit {
   showLoader = false;
   currentActivePage: number = 1;
   pagination = Object.create({});
+  displayNoData = false;
 
   // Input parameters for infinite scroll
   InfiniteScrollConfig = {
@@ -107,6 +109,10 @@ export class DiscussHomeComponent implements OnInit {
       this.showLoader = false;
       this.isTopicCreator = _.get(data, 'privileges.topics:create') === true ? true : false;
       this.discussionList = [...this.discussionList, ...(_.union(_.get(data, 'topics'), _.get(data, 'children')))];
+      this.discussionListBkp = this.discussionList;
+      if (this.discussionList.length == 0) {
+        this.displayNoData = true;
+      }
     }, error => {
       this.showLoader = false;
       // error code check
@@ -141,5 +147,18 @@ export class DiscussHomeComponent implements OnInit {
       this.pagination.currentPage = this.pagination.next.page;
       this.getDiscussionList(_.get(this.routeParams, 'slug'));
     }
+  }
+
+  searchDiscussion(e) {
+    // console.log(e.target.value);
+    let searchText = e.target.value.toLocaleLowerCase();
+    this.discussionList = this.discussionListBkp;
+    this.discussionList = this.discussionList.filter(it => {
+      return it.title.toLocaleLowerCase().includes(searchText);
+    });
+  }
+
+  filterDiscussions() {
+
   }
 }

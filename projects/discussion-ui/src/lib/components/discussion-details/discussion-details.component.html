@@ -31,8 +31,7 @@
 
           <div class="tags" aria-label="tags">
             <ng-container *ngIf="data && data?.tags && data?.tags?.length > 0">
-              <span *ngFor="let tag of data?.tags" class="tag" role="link" tabindex="0"
-                [ngStyle]="getBgColor(tag.value)">
+              <span *ngFor="let tag of data?.tags" class="tag" role="link" tabindex="0">
                 {{tag.value}}
               </span>
             </ng-container>
@@ -72,7 +71,7 @@
               </span>
               <span class="post-icons mobile" role="link" tabindex="0">
                 <!-- trending -->
-                <img src="./assets/discussion-ui/images/views.svg" alt="views icon for seeing the posts" class="icons">
+                <img src="./assets/discussion-ui/images/profits.png" alt="views icon for seeing the posts" class="icons">
                 <span class="vote-value" aria-label="views count">{{data.viewcount}} Views</span>
               </span>
               <span class="post-icons mobile">

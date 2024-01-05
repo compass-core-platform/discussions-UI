@@ -1,17 +1,30 @@
-<button *ngIf="isTopicCreator" (click)="startDiscussion();logTelemetry($event)" role="link" tabindex="0"
+<!-- <button *ngIf="isTopicCreator" (click)="startDiscussion();logTelemetry($event)" role="link" tabindex="0"
     class="df-btn df-btn-normal df-btn-primary df-start-btn" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false"
-    id="start-discussion">Start Discussion</button>
-<div *ngIf="discussionList && discussionList.length > 0" class="topic-list-container" id="topic-scroll" #scrollContainerHeight>
-    <div [infiniteScrollContainer]="'.topic-list-container'" infinite-scroll class="infinite-scroll"
-        [scrollWindow]="false" [infiniteScrollDistance]="InfiniteScrollConfig.modalScrollDistance" [fromRoot]="true"
-        [infiniteScrollThrottle]="InfiniteScrollConfig.modalScrollThrottle" (scrolled)="onModalScrollDown()">
-        <div *ngFor="let discussionData of discussionList"
-            (click)="navigateToDiscussionDetails(discussionData);logTelemetry($event)" id="topic-card">
-            <lib-discuss-card [discussionData]="discussionData"></lib-discuss-card>
+    id="start-discussion">Start Discussion</button> -->
+<div class="container1">
+    <input type="text" (click)="startDiscussion();" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" placeholder="Have questions, suggestions or, ideas in your mind? Post it." id="add-discussion" readonly="true" />
+</div>
+
+<div class="container2" (change)="filterDiscussions();">
+    <select id="filter-posts">
+        <option value="1">Recently posted</option>
+        <option value="2">Popular posts</option>
+    </select>
+    <input type="text" id="search-discussions" (input)="searchDiscussion($event);" placeholder="Search" value="" autocomplete="off"/>
+</div>
+<div class="ui container">
+    <div *ngIf="discussionList && discussionList.length > 0" class="topic-list-container" id="topic-scroll" #scrollContainerHeight>
+        <div [infiniteScrollContainer]="'.topic-list-container'" infinite-scroll class="infinite-scroll"
+            [scrollWindow]="false" [infiniteScrollDistance]="InfiniteScrollConfig.modalScrollDistance" [fromRoot]="true"
+            [infiniteScrollThrottle]="InfiniteScrollConfig.modalScrollThrottle" (scrolled)="onModalScrollDown()">
+            <div *ngFor="let discussionData of discussionList"
+                (click)="navigateToDiscussionDetails(discussionData);logTelemetry($event)" id="topic-card">
+                <lib-discuss-card [discussionData]="discussionData"></lib-discuss-card>
+            </div>
         </div>
     </div>
 </div>
-<ng-container *ngIf="!(discussionList && discussionList.length > 0)">
+<ng-container *ngIf="(displayNoData && discussionList.length == 0)">
     <div class="no-card-content" id="topic-card" tabindex="0">
         <div class="no-data-label">No Data</div>
         <div>
