@@ -9,6 +9,7 @@ export interface IdiscussionConfig {
     headerOptions?: boolean
     bannerOption?: boolean
     defaultLandingPage?: string
+    sidebar: boolean;
   }
   
   export interface Icontext {
