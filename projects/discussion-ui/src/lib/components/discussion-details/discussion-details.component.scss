@@ -4,9 +4,10 @@
 }
 
 .discussion-details {
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-    background:var(--df-card-bg);
-    color:var(--df-text);
+    // box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    border: solid 1px rgba(0, 0, 0, 0.16);
+    background: var(--df-card-bg);
+    color: var(--df-text);
     flex: 3;
     height: auto;
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
@@ -22,12 +23,14 @@
     padding: 0 0 1rem 1.5rem;
     position: relative;
     z-index: 2;
-    .related-discuss-part-content{
+
+    .related-discuss-part-content {
         padding: 0 0.25rem;
     }
 }
 
 .discussion-card-title {
+    margin: 10px 0px 10px;
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -157,7 +160,7 @@
     justify-content: space-between;
 }
 
-.post-icons{
+.post-icons {
     margin-right: 1rem;
 }
 
@@ -170,7 +173,7 @@
 }
 
 .post-time {
-    color: var( var(--gray-400));
+    color: var(var(--gray-400));
     margin: 0 1rem;
     font-size: 0.875rem;
 }
@@ -186,7 +189,7 @@
     align-items: center;
 }
 
-.reply-area-content{
+.reply-area-content {
     position: relative;
     margin-top: 1rem;
 }
@@ -226,7 +229,7 @@
     .post-btn {
         width: 100%;
         margin-top: 0.5rem;
-        cursor:pointer;
+        cursor: pointer;
     }
 
 
@@ -248,9 +251,10 @@
     color: var(--gray-200) !important;
 }
 
-.df-reply-btn{
-margin-bottom: 0.5rem;
+.df-reply-btn {
+    margin-bottom: 0.5rem;
 }
+
 .edited-text {
     padding-left: 0.5rem;
     margin-top: 0.25rem;
@@ -263,7 +267,7 @@ margin-bottom: 0.5rem;
     cursor: pointer;
     width: 1rem;
     height: 1rem;
-    margin:0 0.5rem;
+    margin: 0 0.5rem;
 }
 
 .discuss-card-kabab-menu {
@@ -338,7 +342,7 @@ margin-bottom: 0.5rem;
     }
 }
 
-.vote-value{
+.vote-value {
     margin-left: 0.5rem;
 }
 
@@ -349,31 +353,46 @@ margin-bottom: 0.5rem;
     cursor: pointer;
 }
 
-.edit-text{
+.edit-text {
     display: flex;
+    margin: 15px 0px 10px;
 }
 
-.last-reply-data{
+.last-reply-data {
     margin: 1rem 0;
     font-size: 0.875rem;
 }
 
-.reply-content{
+.reply-content {
     display: flex;
     align-items: center;
 }
 
-.replies{
+.replies {
     width: 100%;
 }
 
-.replies-count{
+.replies-count {
     font-size: 0.875rem;
     font-weight: bold;
     cursor: pointer;
 }
 
-.toggle-icon{
+.toggle-icon {
     padding: 0 1rem;
     cursor: pointer;
+}
+
+.tag {
+    border: solid 1px rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.tags {
+    margin-top: 10px;
+}
+
+hr {
+    margin: 20px 0px 20px;
+    border: solid 0.5px rgba(0, 0, 0, 0.16);
 }

@@ -1,6 +1,7 @@
 .discuss-card-content {
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  // box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+  //   0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border: solid 1px rgba(0, 0, 0, 0.16);
   background: var(--df-card-bg);
   color: var(--df-text);
   flex: 1;
@@ -10,13 +11,13 @@
   display: block;
   position: relative;
   padding: 1rem;
-  border-radius: 0.25rem;
+  // border-radius: 0.25rem;
   word-break: break-all;
   cursor: pointer;
   width: auto;
 
   .discuss-card-title {
-    margin: 0px;
+    margin: 10px 0px 10px;
     color: var(--df-text);
     cursor: pointer;
     font-size: 1rem;
@@ -25,7 +26,7 @@
   }
 
   .discuss-card-subtitle {
-    margin: 8px 0 0;
+    margin: 20px 0px 15px;
     font-size: 0.875rem;
     display: flex;
     align-items: center;
@@ -82,6 +83,7 @@
     font-weight: 700;
     align-items: center;
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     .comments-content{
       display: flex;
@@ -111,5 +113,15 @@
       color: var(--primary);
       font-weight: 700;
     }
+  }
+
+  .tag {
+    border: solid 1px rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  hr {
+    margin: 20px 0px 20px;
+    border: solid 0.5px rgba(0, 0, 0, 0.16);
   }
 }

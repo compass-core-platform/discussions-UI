@@ -19,6 +19,7 @@
         <div>
           <span class="dot"></span>
           <span class="discuss-user-label" *ngIf="discussionData?.user?.username">{{discussionData?.user?.username}}</span>
+          <span class="dot"></span>
           <span class="discuss-user-label" *ngIf="!(discussionData?.user?.username)">{{'Anonymous'}}</span>
         </div>
       </div>
@@ -33,24 +34,24 @@
   <!-- Card content -->
   <div class="tags">
     <ng-container *ngIf="discussionData && discussionData.tags && discussionData.tags.length > 0">
-      <span *ngFor="let tag of discussionData.tags" class="tag" [ngStyle]="getBgColor(tag.value)">
+      <span *ngFor="let tag of discussionData.tags" class="tag">
         {{tag.value}}
       </span>
     </ng-container>
   </div>
   <!-- /Card content -->
-
+  <hr />
   <!-- Card footer -->
   <div class="discuss-card-comments">
     <div class="comments-content">
       <span class="votes-content">
         <!-- <mat-icon class="cursor-pointer">import_export</mat-icon> -->
-        <img src="./assets/discussion-ui/images/votes.svg" alt="votes icon">
+        <img src="./assets/discussion-ui/images/import-export-arrows.png" alt="votes icon">
         <span>{{(discussionData.upvotes + discussionData.downvotes) || 0 }} Votes</span>
       </span>
       <span class="views-content">
         <!-- <mat-icon>trending_up</mat-icon> -->
-        <img src="./assets/discussion-ui/images/views.svg" alt="views icon">
+        <img src="./assets/discussion-ui/images/profits.png" alt="views icon">
         <span>{{discussionData.viewcount || 0}} Views</span>
       </span>
     </div>

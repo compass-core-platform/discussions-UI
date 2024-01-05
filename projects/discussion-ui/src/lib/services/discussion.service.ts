@@ -67,7 +67,7 @@ export class DiscussionService {
     if (page) {
       return `${url}?page=${page}`;
     }
-    return `${url}?page=1`;
+    return `${url}`;
   }
 
   fetchAllTags() {

@@ -74,7 +74,9 @@ export class DiscussCategoryComponent implements OnInit, OnDestroy {
     ids.forEach((cid) => {
       this.fetchCategory(cid).subscribe(data => {
         this.showLoader = false;
-        this.categories.push(data);
+        // this.categories.push(data);
+        // console.log(data);
+        this.navigateToDiscussionPage(_.get(data, 'cid'));
       }, error => {
         // TODO: Toast error
         // error code check

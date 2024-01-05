@@ -19,6 +19,7 @@ export class ConfigService implements OnInit {
   getParams: IdiscussionConfig;
   setCategoryId = new ReplaySubject(1)
   categoryId: string
+  sidebar: string
 
   constructor(
     public activatedRoute: ActivatedRoute,
@@ -39,7 +40,8 @@ export class ConfigService implements OnInit {
     activatedRoute.queryParams.subscribe((params) => {
       const obj: IdiscussionConfig = {
         userId : _.get(params, 'userId'),
-        categories : JSON.parse(_.get(params, 'categories'))
+        categories : JSON.parse(_.get(params, 'categories')),
+        sidebar: _.get(params, 'sidebar')
       };
       this._config = obj;
     });
