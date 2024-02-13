@@ -12,11 +12,11 @@
         </button>
     </div> -->
 
-    <div class="discussion-forum-content" [ngStyle]="{'grid-template-columns': (showSidebar==true) ? '1fr 4fr' : 'unset'}">
-        <div class="discuss-left-panel" *ngIf="showSidebar==true">
+    <div class="discussion-forum-content ui grid">
+        <div class="discuss-left-panel two wide column" *ngIf="showSidebar==true">
             <lib-side-pannel></lib-side-pannel>
         </div>
-        <div>
+        <div class="ten wide column">
             <router-outlet (activate)="onScrollTopActive($event)"></router-outlet>
         </div>
     </div>
