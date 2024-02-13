@@ -34,9 +34,9 @@
 
 .discussion-forum-content {
   margin-top: 3rem;
-  display: grid;
+  display: flex;
   // grid-template-columns: 1fr 4fr;
-  grid-gap: 1.5rem;
+  // grid-gap: 1.5rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

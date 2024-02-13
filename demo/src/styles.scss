@@ -17,7 +17,8 @@ body {
 // Joy Theme
 html[layout="joy"] {
   --primary-hs: 210, 97%; // template primary color // #024f9d
-  --primary: hsl(var(--primary-hs), 31%);  
+  --blue: #0154D2;
+  --primary: var(--blue);  
 
   --secondary-hs: 49, 100%; // template primary color // #ffd829
   --secondary: hsl(var(--secondary-hs), 58%);

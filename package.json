@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^8.0.0",
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@angular/router": "^8.0.0",
+    "compass-sb-styles": "0.0.9",
     "copyfiles": "^2.4.1",
     "core-js": "^2.5.4",
     "dayjs": "^1.10.4",
@@ -121,4 +122,4 @@
     ],
     "transformIgnorePatterns": []
   }
-} 
+}

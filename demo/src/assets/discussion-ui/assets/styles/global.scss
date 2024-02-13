@@ -104,8 +104,6 @@
       .filter-option {
         background: var(--df-tab-bg);
         padding: 0.5rem 1rem;
-        box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
-          0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
         font-size: 0.875rem;
         font-weight: 700;
         margin-right: 0.75rem;
@@ -117,6 +115,7 @@
         white-space: nowrap;
         text-decoration: none;
         color: var(--df-tab-text);
+        border: 1px solid var(--primary);
         &:first-child {
           margin-left: 0;
         }
@@ -197,9 +196,8 @@
 //no data in card
 .no-card-content {
   cursor: pointer;
-  // box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-  //   0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  border: solid 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
   background: var(--df-card-bg);
   color: var(--df-text);
   flex: 1;
@@ -280,3 +278,5 @@
 .df-btn-tertiary:hover {
   background-color: var(--tertiary-400);
 }
+
+

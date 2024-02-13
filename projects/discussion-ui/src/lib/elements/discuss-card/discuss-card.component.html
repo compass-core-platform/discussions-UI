@@ -4,9 +4,9 @@
   <!-- Card header -->
   <div tabindex="0" role="link">
       <!-- <a href="javascript:void(0)" i18n-aria-label tabindex="0" role="link"> -->
-        <h3 class='discuss-card-title' *ngIf="discussionData?.title" [innerHTML]="discussionData?.title"></h3>
-        <h3 class='discuss-card-title' *ngIf="!discussionData?.title && discussionData?.topic?.title" [innerHTML]="discussionData?.topic?.title"></h3>
-        <h3 class='discuss-card-title' *ngIf="!discussionData?.title && !discussionData?.topic?.title && discussionData?.name" [innerHTML]="discussionData?.name"></h3>
+        <h3 class='sub-heading-one discuss-card-title' *ngIf="discussionData?.title" [innerHTML]="discussionData?.title"></h3>
+        <h3 class='sub-heading-one discuss-card-title' *ngIf="!discussionData?.title && discussionData?.topic?.title" [innerHTML]="discussionData?.topic?.title"></h3>
+        <h3 class='sub-heading-one discuss-card-title' *ngIf="!discussionData?.title && !discussionData?.topic?.title && discussionData?.name" [innerHTML]="discussionData?.name"></h3>
       <!-- </a> -->
 
     <!-- Card subtitle -->
@@ -18,13 +18,13 @@
         </div>
         <div>
           <span class="dot"></span>
-          <span class="discuss-user-label" *ngIf="discussionData?.user?.username">{{discussionData?.user?.username}}</span>
+          <span class="discuss-user-label body-two opacity-70" *ngIf="discussionData?.user?.username">{{discussionData?.user?.username}}</span>
           <span class="dot"></span>
-          <span class="discuss-user-label" *ngIf="!(discussionData?.user?.username)">{{'Anonymous'}}</span>
+          <span class="discuss-user-label body-two opacity-70" *ngIf="!(discussionData?.user?.username)">{{'Anonymous'}}</span>
         </div>
       </div>
 
-      <div class="timing">{{discussionData.lastposttime | date}}</div>
+      <div class="timing body-two opacity-70">{{discussionData.lastposttime | date}}</div>
       <!-- <span class="margin-left-l">{{discussionData.timestamp | pipeRelativeTime}}</span> -->
     </div>
     <!-- /Card subtitle -->
@@ -47,12 +47,12 @@
       <span class="votes-content">
         <!-- <mat-icon class="cursor-pointer">import_export</mat-icon> -->
         <img src="./assets/discussion-ui/images/import-export-arrows.png" alt="votes icon">
-        <span>{{(discussionData.upvotes + discussionData.downvotes) || 0 }} Votes</span>
+        <span class="body-two opacity-70">{{(discussionData.upvotes + discussionData.downvotes) || 0 }} Votes</span>
       </span>
       <span class="views-content">
         <!-- <mat-icon>trending_up</mat-icon> -->
         <img src="./assets/discussion-ui/images/profits.png" alt="views icon">
-        <span>{{discussionData.viewcount || 0}} Views</span>
+        <span class="body-two opacity-70">{{discussionData.viewcount || 0}} Views</span>
       </span>
     </div>
     <div class="comments-count">{{((discussionData.postcount || 1) -1) }}
