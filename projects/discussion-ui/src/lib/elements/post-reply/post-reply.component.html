@@ -1,6 +1,6 @@
 <form [formGroup]="replyForm">
   <div appearance="outline" class="text-form-field">
-    <label class="text-form-label">Your answer here</label>
+    <label class="body-two text-form-label">Your answer here</label>
     <textarea placeholder="Type here (minimum 10 characters)" 
       minlength="10" aria-label="Type your message here"
       formControlName="replyContent" 
@@ -11,7 +11,7 @@
   </div>
 </form>
 <div class="updatePostActions">
-    <button class="df-btn df-btn-normal df-cancel-btn"
+    <button class="height-2 com-secondary-btn mr-4"
       *ngIf="showCancel"
       (click)="onCancelClick()" 
       id="cancel-update-post" 
@@ -21,7 +21,7 @@
     <button [ngClass]="{'df-btn-disabled': !isButtonEnabled }" 
       *ngIf="mode === 'edit'"
       [disabled]="!isButtonEnabled" 
-      class="df-btn df-btn-normal df-btn-primary" 
+      class="height-2 com-primary-btn" 
       (click)="onReplyClick('edit')" 
       id="update-post"
       type="button">
@@ -30,7 +30,7 @@
     <button [ngClass]="{'df-btn-disabled': !replyForm.valid }" 
       *ngIf="mode !== 'edit'"
       [disabled]="!isButtonEnabled" 
-      class="df-btn df-btn-normal df-btn-primary" 
+      class="height-2 com-primary-btn" 
       (click)="onReplyClick('reply')" 
       id="update-post"
       type="button">

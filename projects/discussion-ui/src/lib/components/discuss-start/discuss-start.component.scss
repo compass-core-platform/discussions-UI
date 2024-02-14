@@ -47,9 +47,12 @@
         display: block;
         margin: 0 0 0.28571429rem;
         color: #000000de;
-        font-size: .92857143em;
-        font-weight: 700;
         text-transform: none;
+        border-radius: 8px;
+        font-family: Lato,Arial,Helvetica,sans-serif;
+        font-size: 14px!important;
+        font-weight: 400!important;
+        color: #0009!important;
       }
 
       .start-form-field {
@@ -85,7 +88,7 @@
           padding: 0.5rem 0.875rem;
           &:focus,
           .active {
-            border-color: var(--primary-400) !important;
+            border-color: #85b7d9!important
           }
         }
       }
@@ -119,9 +122,11 @@
 
         label {
           display: inline-block;
-          font-size: 0.8125rem;
-          font-weight: 700;
           margin-bottom: 0;
+          font-family: Lato,Arial,Helvetica,sans-serif;
+          font-size: 14px!important;
+          font-weight: 400!important;
+          color: #0009!important;
         }
       }
     }
@@ -135,20 +140,20 @@
 
 ::ng-deep {
   .ng2-tag-input {
-    border: .0625rem solid var(--gray-200) !important;
-    border-radius: 0.1875rem;
-    color: var(--df-text) !important;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 8px;
+    color: #0009 !important;
     display: block;
-    font-size: 0.8125rem !important;
+    font-size: 14px !important;
     max-width: 100%;
     padding: 0.25rem 0.5rem;
     margin: 0.5rem 0;
     background: var(--df-field-control-bg);
-    border-bottom: .0625rem solid var(--gray-200) !important;
   }
 
   .ng2-tag-input--focused {
-    border-color: var(--primary-400) !important;
+    border-color: #85b7d9!important;
+    border-bottom: 0px !important
   }
 
   .ng2-tag-input__text-input {
@@ -163,8 +168,9 @@
   }
 
    tag {
-    background: var(--df-tag-bg) !important;
-    color: var(--df-text) !important;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #000000de;
     &:first-child{
       margin-left: 0.5rem !important;
     }
