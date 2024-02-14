@@ -51,8 +51,8 @@
         border-radius: 8px;
         font-family: Lato,Arial,Helvetica,sans-serif;
         font-size: 14px!important;
-        font-weight: 400!important;
-        color: #0009!important;
+        font-weight: 600!important;
+        color: #000000 !important;
       }
 
       .start-form-field {
@@ -100,6 +100,7 @@
 
       .start-modal-buttons {
         float: right;
+        display: flex;
 
         .df-submit-btn,
         .df-update-btn {
@@ -125,8 +126,8 @@
           margin-bottom: 0;
           font-family: Lato,Arial,Helvetica,sans-serif;
           font-size: 14px!important;
-          font-weight: 400!important;
-          color: #0009!important;
+          font-weight: 600 !important;
+          color: #000000 !important;
         }
       }
     }
