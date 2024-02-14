@@ -4,7 +4,7 @@
 
       <!-- header -->
       <div class="discuss-card-kabab-menu">
-        <h3 class="discussion-card-title df-label-color" [innerHTML]="data?.title"></h3>
+        <h3 class="discussion-card-title df-label-color sub-heading-one" [innerHTML]="data?.title"></h3>
         <div *ngIf="data?.uid === mainUid">
           <div class="kabab-menu" id="group-actions" (click)="onMenuClick()" tabindex="0"></div>
           <div class="kabab-menu-dropdown-content" [hidden]="dropdownContent">
@@ -18,9 +18,9 @@
       <!-- /header -->
 
       <ng-container *ngFor="let post of data?.posts">
-        <div class="post-reply-card" *ngIf="post?.index === 0">
-          <h3 class="discussion-heading df-text-color" [innerHTML]="post?.content"></h3>
-          <div class="discussion-content">
+        <div class="post-reply-card body-two" *ngIf="post?.index === 0">
+          <h3 class="discussion-heading df-text-color body-two" [innerHTML]="post?.content"></h3>
+          <div class="discussion-content ">
             <div class="circle-text">
               <div class="circle-label">{{ post?.user?.username | splitInitials }}</div>
             </div>
@@ -125,14 +125,14 @@
       <div *ngIf="post?.index != 0" class="post-card">
         <!-- header -->
         <div class="comment-section">
-          <div class="post-header-content">
+          <div class="post-header-content sub-heading-one">
             <span class="circle-text"><span class="circle-label">{{ post?.user?.username | splitInitials
                 }}</span></span>
             <span class="post-name" *ngIf="post?.user?.fullname" [innerHTML]="post?.user?.fullname"></span>
             <span class="post-name df-label-color" *ngIf="!post?.user?.fullname"
               [innerHTML]="post?.user?.username"></span>
           </div>
-          <div class="custom-actions">
+          <div class="custom-actions body-two">
             <span class="post-time">{{ post?.timestamp | date: 'dd MMM yyyy hh:mm a'}}</span>
             <ng-container *ngIf="mainUid === post?.uid">
               <img src="./assets/discussion-ui/images/edit.svg" class="edit-icon" id="edit-post" alt="edit icon"
@@ -143,7 +143,7 @@
           </div>
         </div>
         <!-- / header -->
-        <div>
+        <div class="body-two">
           <div class="edit-text" *ngIf="!editMode || editContentIndex !== i">
             <p [innerHTML]="post?.content" class="post-labels df-text-color"></p>
             <div class="edited-text" *ngIf="post?.edited">(edited)</div>
@@ -189,7 +189,7 @@
             </div>
 
             <button (click)="togglePost(post); logTelemetry($event, post)"
-              class="df-btn df-btn-normal df-btn-primary df-reply-btn" id="reply-comment">
+              class="com-primary-btn height-2" id="reply-comment">
               Reply </button>
 
           </div>

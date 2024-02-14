@@ -143,9 +143,14 @@
     margin-right: 0.5rem;
 }
 
-.post-card,
 .post-reply-card {
     border-bottom: 0.0625rem solid var(--gray-100);
+    margin-bottom: 1.5rem;
+}
+
+.post-card {
+    background: #00000014;
+    padding: 10px;
     margin-bottom: 1.5rem;
 }
 
@@ -395,4 +400,9 @@
 hr {
     margin: 20px 0px 20px;
     border: solid 0.5px rgba(0, 0, 0, 0.16);
+}
+
+.height-2 {
+    height: 2rem;
+    margin-bottom: 0.5rem;
 }

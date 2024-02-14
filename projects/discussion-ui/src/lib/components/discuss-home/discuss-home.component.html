@@ -2,15 +2,15 @@
     class="df-btn df-btn-normal df-btn-primary df-start-btn" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false"
     id="start-discussion">Start Discussion</button> -->
 <div class="container1">
-    <input type="text" (click)="startDiscussion();" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" placeholder="Have questions, suggestions or, ideas in your mind? Post it." id="add-discussion" readonly="true" />
+    <input type="text" (click)="startDiscussion();" class="focus-visble" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" placeholder="Have questions, suggestions or, ideas in your mind? Post it." id="add-discussion" readonly="true" />
 </div>
 
 <div class="container2" (change)="filterDiscussions();">
-    <select id="filter-posts">
+    <select id="filter-posts" class="focus-visble">
         <option value="1">Recently posted</option>
         <option value="2">Popular posts</option>
     </select>
-    <input type="text" id="search-discussions" (input)="searchDiscussion($event);" placeholder="Search" value="" autocomplete="off"/>
+    <input type="text" id="search-discussions" class="focus-visble" (input)="searchDiscussion($event);" placeholder="Search" value="" autocomplete="off"/>
 </div>
 <div class="ui container">
     <div *ngIf="discussionList && discussionList.length > 0" class="topic-list-container" id="topic-scroll" #scrollContainerHeight>
