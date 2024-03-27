@@ -23,7 +23,7 @@ Run `ng test discussion-ui` to execute the unit tests via [Karma](https://karma-
 
 Discussion forum Architecture, Installation & APIs documentation \
 https://lern.sunbird.org/use/developer-guide/discussion-forum/architecture/code-flow
-\
+\\\
 NodeBB Setup, Plugins installation & Admin pannel settings \
 https://project-sunbird.atlassian.net/wiki/spaces/SBDES/pages/1981546511/Discussion+Forum+Deployment#Nodebb-Setup
 
