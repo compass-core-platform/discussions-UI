@@ -21,4 +21,6 @@ Run `ng test discussion-ui` to execute the unit tests via [Karma](https://karma-
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Discussion forum Architecture, Installation & APIs documentation \
+https://lern.sunbird.org/use/developer-guide/discussion-forum/architecture/code-flow
+
