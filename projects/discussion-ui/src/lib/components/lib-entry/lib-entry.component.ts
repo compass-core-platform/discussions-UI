@@ -37,6 +37,7 @@ export class LibEntryComponent implements OnInit, OnDestroy {
   showLoaderAlert = false;
   subscription: Subscription
   showSidebar = true;
+  showBanner = true;
 
   constructor(
     public activatedRoute: ActivatedRoute,
@@ -76,6 +77,9 @@ export class LibEntryComponent implements OnInit, OnDestroy {
     this.discussionService.forumIds = _.get(rawCategories, 'result');
     if (_.get(this.data, 'sidebar') != undefined) {
       this.showSidebar = _.get(this.data, 'sidebar') == '' ? false : _.get(this.data, 'sidebar');
+    }
+    if (_.get(this.data, 'banner') != undefined) {
+      this.showBanner = _.get(this.data, 'banner') == '' ? false : _.get(this.data, 'banner');
     }
     // alert(this.showSidebar)
     this.discussionService.initializeUserDetails(this.discussionService.userId);

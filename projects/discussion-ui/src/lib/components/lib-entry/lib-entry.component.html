@@ -1,3 +1,8 @@
+<header class="banner" *ngIf="showBanner==true">
+    <div class="ui">
+        <img class="discussion-banner" src="./assets/discussion-ui/images/discuss-hub-banner.jpeg" />
+    </div>
+</header>
 <div class="sbt-inside-page-container ui container">
     <!-- <div class="df-header">
         <button type="button" class="df-btn df-btn-normal df-btn-primary df-back-btn" tabindex="0" autofocus
@@ -11,7 +16,6 @@
             <img src="./assets/discussion-ui/images/close.png" alt="close icon" />
         </button>
     </div> -->
-
     <div class="discussion-forum-content ui grid">
         <div class="discuss-left-panel two wide column" *ngIf="showSidebar==true">
             <lib-side-pannel></lib-side-pannel>
